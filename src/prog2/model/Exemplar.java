@@ -8,24 +8,34 @@ public class Exemplar implements InExemplar {
     private boolean diponible;
 
 
+public Exemplar (int id, String autor, String titol, boolean llargTermini, boolean disponible){
 
+    this.id = id;
+    this.autor = autor;
+    this.titol = titol;
+    this.llargTermini = llargTermini;
+    this.disponible = disponible;
 
-    void setId(String id);
+}
 
-    String getId();
+    void setId(String id) { this.id = id; }
 
-    void setTitol(String titol);
+    String getId() { rturn this.id; }
 
-    String getTitol();
+    void setTitol(String titol) { this.titol = titol; }
 
-    void setAutor(String autor);
+    String getTitol() { rturn this.titol; }
 
-    String getAutor();
+    void setAutor(String autor) { this.autor = autor; }
 
-    void setAdmetPrestecLlarg(boolean admetPrestecLlarg);
+    String getAutor() { rturn this.autor; }
 
-    boolean getAdmetPrestecLlarg();
+    void setAdmetPrestecLlarg(boolean admetPrestecLlarg) { this.llargTermini = llargTermini; }
+
+    boolean getAdmetPrestecLlarg() { rturn this.llargTermini; }
 
     @Override
-    String toString();
+    String toString() {
+        return "ID: " + id + " amb autor: " + autor + " i titol " + titol + ", està disponible: " + disponible + ", es pot solicitar el llarg termini: " + llargTermini + ".";
+    }
 }
