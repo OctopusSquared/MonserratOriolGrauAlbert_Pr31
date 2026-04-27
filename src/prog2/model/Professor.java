@@ -43,7 +43,8 @@ public class Professor extends Usuari {
 
     @Override
     public String toString() {
-        return "Tipus=" + tipusClient() + super.toString() +
+        return "Tipus=" + tipusClient() +
+                ", " + super.toString() +
                 ", Num. prestecs normals=" + prestecsNormals +
                 ", Num. prestecs llargs=" + prestecsLlargs;
     }
