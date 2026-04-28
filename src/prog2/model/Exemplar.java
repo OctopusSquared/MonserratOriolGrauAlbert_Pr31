@@ -1,41 +1,39 @@
 package prog2.model;
 
 public class Exemplar implements InExemplar {
-    private int id;
+    private String id;
     private String autor;
     private String titol;
-    private boolean llargTermini;
-    private boolean diponible;
+    private boolean admetPrestecLlarg;
+    private boolean disponible;
 
 
-public Exemplar (int id, String autor, String titol, boolean llargTermini, boolean disponible){
+    public Exemplar (String id, String autor, String titol, boolean admetPrestecLlarg){
+        this.id = id;
+        this.autor = autor;
+        this.titol = titol;
+        this.admetPrestecLlarg = admetPrestecLlarg;
+        disponible = true;
 
-    this.id = id;
-    this.autor = autor;
-    this.titol = titol;
-    this.llargTermini = llargTermini;
-    this.disponible = disponible;
+    }
 
-}
-
-    void setId(String id) { this.id = id; }
-
-    String getId() { rturn this.id; }
-
-    void setTitol(String titol) { this.titol = titol; }
-
-    String getTitol() { rturn this.titol; }
-
-    void setAutor(String autor) { this.autor = autor; }
-
-    String getAutor() { rturn this.autor; }
-
-    void setAdmetPrestecLlarg(boolean admetPrestecLlarg) { this.llargTermini = llargTermini; }
-
-    boolean getAdmetPrestecLlarg() { rturn this.llargTermini; }
+    public void setId(String id) { this.id = id; }
+    public String getId() { return id; }
+    public void setTitol(String titol) { this.titol = titol; }
+    public String getTitol() { return titol; }
+    public void setAutor(String autor) { this.autor = autor; }
+    public String getAutor() { return autor; }
+    public void setAdmetPrestecLlarg(boolean admetPrestecLlarg) { this.admetPrestecLlarg = admetPrestecLlarg; }
+    public boolean getAdmetPrestecLlarg() { return admetPrestecLlarg; }
+    public void setDisponible(boolean disponible) { this.disponible = disponible; }
+    public boolean getDisponible() { return disponible; }
 
     @Override
-    String toString() {
-        return "ID: " + id + " amb autor: " + autor + " i titol " + titol + ", està disponible: " + disponible + ", es pot solicitar el llarg termini: " + llargTermini + ".";
+    public String toString() {
+        return "Id=" + id +
+                " Titol=" + titol +
+                " Autor=" + autor +
+                ", Admet Prestec Llarg=" + admetPrestecLlarg +
+                ", Disponible=" + disponible + ".";
     }
 }
