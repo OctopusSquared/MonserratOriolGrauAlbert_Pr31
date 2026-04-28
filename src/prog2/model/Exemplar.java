@@ -1,6 +1,10 @@
 package prog2.model;
 
 public class Exemplar implements InExemplar {
+    
+    // Atributs
+    //------------
+    
     private String id;
     private String autor;
     private String titol;
@@ -8,6 +12,16 @@ public class Exemplar implements InExemplar {
     private boolean disponible;
 
 
+    // Constructors
+    //---------------
+
+    /**
+     * Constructor per paràmetres de la classe.
+     * @param id
+     * @param autor
+     * @param titol
+     * @param admetPrestecLlarg
+     */
     public Exemplar (String id, String autor, String titol, boolean admetPrestecLlarg){
         this.id = id;
         this.autor = autor;
@@ -17,6 +31,9 @@ public class Exemplar implements InExemplar {
 
     }
 
+    // Getters i Setters.
+    //---------------------
+    
     public void setId(String id) { this.id = id; }
     public String getId() { return id; }
     public void setTitol(String titol) { this.titol = titol; }
@@ -28,6 +45,13 @@ public class Exemplar implements InExemplar {
     public void setDisponible(boolean disponible) { this.disponible = disponible; }
     public boolean getDisponible() { return disponible; }
 
+    // Mètodes
+    //---------
+
+    /**
+     * Retorna un String amb la informació sobre l'Exemplar.
+     * @return
+     */
     @Override
     public String toString() {
         return "Id=" + id +
